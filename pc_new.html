@@ -1,0 +1,252 @@
+<html>
+
+<head>
+    <title>PrimePlus - Buyer Side</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Commissioner' rel='stylesheet'> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+    <link href='static/assets/css/buyer/tablet_new.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" media="screen and (min-width: 601px)" href="static/assets/css/buyer/tablet.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="static/assets/css/buyer/mobile.css"> -->
+
+
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+            integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/vue-star-rating/dist/VueStarRating.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pretty-checkbox-vue@1.1/dist/pretty-checkbox-vue.min.js"></script>
+
+</head>
+
+<body>
+    <div id="main_div">
+        <div class="top-poly">
+            <div class="logo">
+                Logo
+            </div>
+        </div>
+        <div class="left-poly"></div>
+        <fieldset id="p1" class="show">
+            <div class="container container-intro pl-0 pr-0 h-100">
+                <div class="row ml-0 mr-0">
+                    <div class="col-6">
+                        <div class="survey-intro w-auto row">
+                            <div class="col-12 survey-intro-title pl-0 pr-0 pt-4">
+                                We&apos;d love to hear from you!
+                            </div>
+                            <div class="col-12 survey-intro-desc pl-0 pr-0">
+                                Thanks for purchasing our product. Share your experience on Amazon with our product and get an Amazon giftcard when it&apos;s verified. No shipping charges, no hidden fees, no credit card required!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="container card-gift col-8">
+                            <img src="static/assets/img/buyer/gift_box.svg" alt="Gift" class="svg-gift">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="card-gift-title">YOUR GIFT</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5 col-lg-4">
+                                    <div class="div-card-git-img">
+                                        <img src="static/assets/img/buyer/gift.png" class="card-gift-img">
+                                    </div>
+                                </div>
+                                <div class="col-7 col-lg-8 my-auto">
+                                    <div class="div-card-gift-info">
+                                        <span class="d-block card-amz-gift-title">Fancy Gift</span>
+                                        <span class="d-block card-amz-gift-price">Worth $5.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="center row w-100 pt-2 pb-2">
+                    <div class="col-5 pr-0"></div>
+                    <div class="col-3 mx-auto my-auto pl-0 text-left">
+                        <a onclick="app.changeSection('#p1', '#p2b');" href="#" class="link-survey">Let me think about it</a>
+                    </div>
+                    <div class="col-4 mx-auto my-auto p-0">
+                        <button class="btn next-btn w-90 p-2" onclick="app.changeSection('#p1', '#p2');">
+                            <span>Yes, I'm ready!</span>
+                            <img src="static/assets/img/buyer/btn-next.svg" class="next-btn-arrow float-right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="p2b">
+            <div class="container container-intro pl-0 pr-0 h-100">
+                <div class="row ml-0 mr-0">
+                    <div class="col-12 col-lg-6">
+                        <div class="survey-intro w-auto row">
+                            <div class="col-12 survey-intro-title pl-0 pr-0 pt-4">
+                                That&apos;s okay.You can come back anytime.
+                            </div>
+                            <div class="col-12 survey-intro-desc pl-0 pr-0">
+                                As long as this campaign is still valid, you can come back anytime to get a free gift.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center pr-0 pl-0">
+                        <div class="container p-0">
+                            <img src="static/assets/img/buyer/decide_later_mobile_lg.png" class="img-later">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="center row w-100 pt-2 pb-2">
+                    <div class="col-5 pr-0"></div>
+                    <div class="col-3 mx-auto my-auto pl-0 text-left">
+                        
+                    </div>
+                    <div class="col-4 mx-auto my-auto p-0">
+                        <button class="btn next-btn w-90 p-2" onclick="app.changeSection('#p1', '#p2');">
+                            <span>Visit our Amazon Store</span>
+                            <img src="static/assets/img/buyer/btn-next.svg" class="next-btn-arrow float-right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset id="p2">
+            <div class="row div-progress">
+                <div class="col-6 col-lg-8"></div>
+                <div class="col-6 col-lg-4">
+                    <div class="counter">
+                        <ul id="progressbar" class="progressbar">
+                            <li class="active"><span>Order ID</span></li>
+                            <li class="inactive"><span>Rate Us</span></li>
+                            <li class="inactive"><span>Verify</span></li>
+                            <li class="inactive"><span>Buyer Info</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container container-intro pl-0 pr-0 h-100">
+                <div class="row ml-0 mr-0">
+                    <div class="col-12 col-lg-6">
+                        <div class="survey-intro w-auto row">
+                            <div class="col-12 survey-intro-title pl-0 pr-0 pt-4">
+                                Your Order ID, Please.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 text-center pr-0 pl-0">
+                        <div class="row container w-auto card-gift pl-0 pr-0 mt-4">
+                            <div class="col-12 form-group">
+                                <label for="exampleInputEmail1" class="text-uppercase pt-3 pb-3">Order Id</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="orderid" placeholder="Enter your Amazon Order ID">
+                            </div>
+                            <div class="col-12 div-hr">
+                                <hr>
+                            </div>
+                            <div class="col-12 text-center pt-3 pb-3">
+                                <a href="https://www.google.com" target="_blank" class="link-survey">How to find my order ID?</a>
+                            </div>
+                        </div>
+                        <div class="row container w-auto card-gift pl-0 pr-0 mt-4 div-check div-terms">
+                            <div class="col-12 custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label pl-3" for="customCheck1">I agree with the T&C and Privacy Policy</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="center row w-100 pt-2 pb-2">
+                    <div class="col-5 pr-0"></div>
+                    <div class="col-3 mx-auto my-auto pl-0 text-left">
+                        
+                    </div>
+                    <div class="col-4 mx-auto my-auto p-0">
+                        <button class="btn next-btn w-90 p-2" onclick="app.changeSection('#p1', '#p2');">
+                            <span>Visit our Amazon Store</span>
+                            <img src="static/assets/img/buyer/btn-next.svg" class="next-btn-arrow float-right">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</body>
+<script>
+// Vue.component('v-select', VueSelect.VueSelect)
+Vue.component('star-rating', VueStarRating.default);
+Vue.use(PrettyCheckbox);
+let app = new Vue({
+    delimiters: ['[[', ']]'],
+    el: '#main_div',
+    data: {
+        // Page 2 parameters
+        p2State: '',
+        p2States: ['A', 'B', 'C'],
+
+        // Page 3 parameters
+        p3Q2: 'HOW DO YOU FIND US?',
+        p3Q2Ans: '',
+        // minRatingThresh: survey_d.fields.ask_amz_rev_thresh,
+        // p3Q1: survey_d.fields.questionnaire["1"].question,
+        p3Q1: 'HOW YOU LIKE OUR PRODUCT?',
+        p3Q1Ans: 0,
+        // p3Q1Type: survey_d.fields.questionnaire["1"].type,
+        // p3Q2: survey_d.fields.questionnaire["2"].question,
+        p3Q2: 'HOW DO YOU FIND US?',
+        // p3Q2Type: survey_d.fields.questionnaire["2"].type,
+        p3Q2Ans: '',
+        // p3Q2A1: survey_d.fields.questionnaire["2"].answers ? survey_d.fields.questionnaire["2"].answers[0] : '',
+        // p3Q2A2: survey_d.fields.questionnaire["2"].answers ? survey_d.fields.questionnaire["2"].answers[1] : '',
+        // p3Q2A3: survey_d.fields.questionnaire["2"].answers ? survey_d.fields.questionnaire["2"].answers[2] : '',
+        p3Q2A1: 'Amazon Search',
+        p3Q2A2: 'Facebook Ad',
+        p3Q2A3: 'Friend Recommendation',
+        // p3Q3: survey_d.fields.questionnaire["3"].question,
+        p3Q3: 'WILL YOU RECOMMEND OUR PRODUCT?',
+        // p3Q3Type: survey_d.fields.questionnaire["3"].type,
+        p3Q3Ans: '',
+        p3Q3A1: 'Yes',
+        p3Q3A2: 'No',
+        p3Q3A3: `Don't Know`,
+        // p3Q3A1: survey_d.fields.questionnaire["3"].answers ? survey_d.fields.questionnaire["3"].answers[0] : '',
+        // p3Q3A2: survey_d.fields.questionnaire["3"].answers ? survey_d.fields.questionnaire["3"].answers[1] : '',
+        // p3Q3A3: survey_d.fields.questionnaire["3"].answers ? survey_d.fields.questionnaire["3"].answers[2] : '',
+
+    },
+    methods: {
+        changeSection(p1, p2) {
+            console.log(this.p3Q2Ans);
+            console.log(p2)
+
+            console.log(this.p3Q2Ans == '1' && p2 == '#p4')
+            if (this.p3Q2Ans == '1' && p2 == '#p4') {
+                p2 = '#p4b'; 
+            }
+
+            $(p1).removeClass('show');
+            $(p2).addClass('show');
+        }
+    }
+})
+</script>
+</html>
