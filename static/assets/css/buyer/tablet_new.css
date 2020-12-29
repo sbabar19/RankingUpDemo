@@ -1,6 +1,17 @@
+html{
+    width:100%;
+    height:100%;
+    
+}
+
+#main_div {
+    height: 100%;
+    width: 100%;
+}
+
 
 body {
-    /* font-family: 'Commissioner', sans-serif; */
+    font-family: Commissioner;
     background-color: #F2F2F2;
     padding: 0;
     margin: 0;
@@ -16,7 +27,7 @@ fieldset {
     width: 100%;
 }
 
-.show {
+.show, .fshow {
     display: block;
 }
 
@@ -35,8 +46,8 @@ fieldset {
 
 .container-intro, .logo {
     display: grid;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
 }
 
 .logo {
@@ -58,17 +69,28 @@ fieldset {
     
 }
 
+.logo-end {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    letter-spacing: 5.625px;
+
+    color: #FFFFFF;
+
+    mix-blend-mode: normal;
+    opacity: 0.3;
+}
+
 .container-intro {
     display: grid;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
 }
 
 .survey-intro {
-    /* height: 272px; */
-    margin-top: 140px;
-    /* padding-left: 0%; */
-    /* padding-right: 0%; */
+    margin-top: calc(27%);
     display: block;
 }
 
@@ -78,35 +100,48 @@ fieldset {
     font-weight: 800;
     font-size: 64px;
     line-height: 64px;
-
     letter-spacing: -0.333333px;
-
     color: #1B2436;
+}
+
+.container-end .survey-intro-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 50px;
+    /* identical to box height, or 104% */
+
+    letter-spacing: -0.25px;
+
+    color: #FFFFFF;
 }
 
 .survey-intro-desc {
     font-family: Commissioner;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 28px;
     color: #7A879F;
     margin-top: 2rem;
     /* margin-top: -3rem; */
 }
 
+.container-card-gift {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+.onsite-container-card-gift {
+    width: 60% !important;
+}
+
 .card-gift {
-    /* margin-top: -130px; */
-    /* margin-top: -5rem; */
-    /* z-index: 3; */
     background: #FFFFFF;
     box-shadow: 10px 10px 20px rgba(110, 145, 209, 0.0789829);
     border-radius: 20px;
     padding-top: 15px;
-    padding-bottom: 15px;
-    margin-right: 20px;
-    /* margin-left: 20px; */
-    margin-top: 200px;
 }
 
 .card-gift-info {
@@ -116,6 +151,10 @@ fieldset {
 .card-gift .row {
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.card-gift .row-img {
+    padding-bottom: 20px;
 }
 
 .card-gift .svg-gift {
@@ -172,6 +211,25 @@ fieldset {
     transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
+.bottom-poly {
+    width: 60%;
+    height: 55%;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    /* background-color: rebeccapurple; */
+    background: linear-gradient(243.62deg, #D8E0F0 0%, rgba(241, 245, 252, 0.0001) 78.63%);
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    border-radius: 0px 60px 0px 0px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.custom-checkbox .custom-control-label::before {
+    background-color: #DBE3EF !important;
+    border-radius: 6px !important;
+}
+
 .container-intro {
     position: relative;
 }
@@ -180,7 +238,7 @@ fieldset {
     height: auto !important;
     position: fixed !important;
     left: 0 !important;
-    bottom: 0 !important;
+    /* bottom: 0 !important; */
     text-align: center !important;
     padding-left: 0px !important;
     margin-left: 0px !important;
@@ -200,11 +258,12 @@ fieldset {
 }
 
 .footer {  
+    /* float: right; */
     position: absolute;
     height: auto;
     background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
     border-radius: 60px 0px 0px 0px;
-    bottom: 0;
+    /* bottom: 0; */
     width: calc(100% - 5rem);
     right: 0;
 }
@@ -219,10 +278,31 @@ fieldset {
     background: #F0374A;
     border-radius: 32px;
     border: none;
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    font-family: Commissioner;
     font-style: normal;
     font-weight: 800;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 28px;
+    color: #FFFFFF;
+    width: 334px;
+    height: 64px;
+
+    position: relative;
+}
+
+.next-btn-end span {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    /* identical to box height, or 156% */
+
+    text-align: center;
+
     color: #FFFFFF;
 }
 
@@ -234,15 +314,11 @@ fieldset {
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
 }
 
-.next-btn-arrow {
-    width: 2rem;
-}
 
 .footer .center .link-survey {
-    /* font-family: 'Commissioner'; */
+    font-family: 'Commissioner';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -260,12 +336,18 @@ fieldset {
     width: 90%;
 }
 
+.div-img-later {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+}
+/* 
 .img-later {
     margin-top: 6rem;
     margin-left: -15px;
     z-index: 1;
     width: 70%;
-}
+} */
 
 body {
     counter-reset: step;
@@ -385,12 +467,39 @@ input, textarea, select {
     font-family: Commissioner !important;
     font-style: normal !important;
     font-weight: bold !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
     line-height: 15px !important;
     /* identical to box height, or 150% */
     letter-spacing: 1.66667px !important;
     color: #1B2436 !important;
     margin-left: 0.75rem;
+
+}
+
+.container-survey a {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 28px;
+    /* identical to box height, or 215% */
+    text-decoration-line: underline;
+    color: #7A879F;
+}
+
+.div-terms label {
+    font-family: Commissioner;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 15px !important;
+    line-height: 22px !important;
+    /* identical to box height, or 147% */
+    color: #7A879F !important;
+}
+
+.div-check {
+    background-color: #F2F2F200 !important;
+    box-shadow: none;
 }
 
 .container-survey hr {
@@ -402,4 +511,149 @@ input, textarea, select {
 .div-hr {
     padding-left: 0px!important;
     padding-right: 0px!important;
+}
+
+.ptb-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.div-question {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height, or 125% */
+    text-align: center;
+    letter-spacing: 2px;
+    color: #BAC1CD;
+}
+
+.vue-star-rating {
+    justify-content: center;
+}
+
+
+.div-answer .form-check {
+    background: #F3F5F9;
+    border-radius: 20px;
+}
+
+
+.pretty {
+    margin-right: 0 !important;
+    white-space: normal !important;
+    width: 100%;
+}
+.pretty .state label {
+    text-indent: 0 !important;
+}
+
+.pretty .state label > span {
+    display: inline-block !important;
+    padding-left: 1.8em !important;
+    line-height: 1.3em !important;
+}
+
+.pretty .state label::after, .pretty .state label::before {
+    top: 1px !important;
+}
+
+.pretty.p-icon .state .icon {
+    top: 1px !important;
+}
+
+.pretty span {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 12px;
+    margin-left: 1rem;
+    /* identical to box height, or 187% */
+    color: #7A879F;
+}
+
+.pretty input:checked~.state.p-success label:after, .pretty.p-toggle .state.p-success label:after {
+    background-color: #F0374A !important;
+}
+
+.card-amz {
+    background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
+    box-shadow: 10px 10px 20px rgba(110, 145, 209, 0.0789829);
+    padding-bottom: 15px;
+}
+
+.text-card-amz {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    /* or 187% */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.text-proceed {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 28px;
+    /* identical to box height, or 187% */
+
+    text-align: center;
+
+    color: #7A879F;
+}
+
+.down-arrow {
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.container-main-form {
+    left: 35%;
+    width: 65%;
+}
+
+.guide-fill-survey {
+    font-family: Commissioner;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    /* or 187% */
+
+    text-align: center;
+
+    color: #7A879F;
+}
+
+.container-end {
+    background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
+    border-radius: 30px;
+}
+
+.div-fol-end {
+    height: 6rem;
+}
+
+.mb-footer, .mb-div {
+    margin-bottom: 10rem;
+}
+
+.loc-btn {
+    background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
+    box-shadow: 10px 10px 20px rgba(110, 145, 209, 0.0789829);
+    font-size: 12px !important;
+}
+
+.container-address {
+    background-color: #00ffff00 !important;
+    box-shadow: none !important;
 }
