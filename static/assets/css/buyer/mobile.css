@@ -668,3 +668,7 @@ input, textarea, select {
     margin-top: 0px !important; */
     border-radius: 0px 0px 0px 0px !important;
 }
+
+.pb-15 {
+    padding-bottom: 15px !important;
+}
