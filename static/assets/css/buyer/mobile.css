@@ -14,6 +14,16 @@ body {
 
 .container-intro {
     display: grid;
+    margin-bottom: 400px !important;
+}
+
+.container-survey, .container-review-end {
+    margin-bottom: 200px !important;
+}
+
+
+#p6 .container-survey {
+    margin-bottom: 0px !important;
 }
 
 .survey-main {
@@ -198,8 +208,10 @@ body {
 }
 
 .footer {
-    position: relative;
-    height: 241px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
     margin-top: -45px;
     background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
     border-radius: 0px 60px 0px 0px;
@@ -209,6 +221,7 @@ body {
     margin-left: -15px;
     margin-right: -15px;
     padding-right: 0px;
+    z-index: 9999;
 }
 
 .footer .center {
@@ -486,10 +499,10 @@ input, textarea, select {
     color: #7A879F !important;
 }
 
-.footer-main {
+/* .footer-main {
     position: relative !important;
     margin-top: 10px;
-}
+} */
 
 .div-question {
     font-family: Commissioner;
@@ -603,7 +616,7 @@ input, textarea, select {
 
 .container-end {
     margin-top: 30px;
-    height: 100%;
+    height: 110%;
     background: linear-gradient(225deg, #2B2E38 0%, #1A1D24 100%);
     border-radius: 0px 60px 0px 0px;
 }
