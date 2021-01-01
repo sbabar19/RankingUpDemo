@@ -655,3 +655,85 @@ input, textarea, select {
     margin-top: 0px !important; */
     border-radius: 0px 0px 0px 0px !important;
 }
+
+
+@media (min-width: 768px) { 
+    .footer {
+        position: fixed !important;
+        width: 100% !important;
+        margin-top: 0px !important;
+        bottom: 0 !important;
+    }
+
+    #p1 .footer {
+        margin-left: -40px !important;
+    }
+
+    .div-back-grey {
+        background: #00000000;
+    }
+
+    #progressbar li.active::before {
+        background: #F0374A;
+    }
+    #progressbar li:before {
+        margin: 0px auto 10px 50px !important;
+    }
+
+    #p3 .container-survey .card-gift:last-child {
+        margin-bottom: 195px !important;
+    }
+
+    #p5 .container-review-end {
+        margin-bottom: 195px !important;
+    }
+
+    #p6 .container {
+        max-width: 100%;
+    }
+
+    .logo-container-ext {
+        background: #00000000;
+    }
+
+    .container-end {
+        height: calc(100% - 30px);
+    }
+}
+
+
+@media (min-width: 992px) { 
+    #p1 .footer {
+        margin-left: -47px !important;
+    }
+
+
+    #p1 .card-gift {
+        width: 600px !important;
+        margin: auto !important;
+    }
+
+    #progressbar li:before {
+        margin: 0px auto 10px 83px !important;
+    }
+
+ }
+
+ @media (min-width: 1200px) { 
+    #p1 .footer {
+        margin-left: -128px !important;
+    }
+
+    #progressbar li:before {
+        margin: 0px auto 10px 125px !important;
+    }
+
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-img-end {
+        display: none;
+    }
+}

@@ -667,15 +667,18 @@ input, textarea, select {
     }
 }
 
-/* asd */
 @media (max-width: 767.98px) {
     #progressbar li span {
         margin-left: -50% !important;
     }
 }
 
-/* asd */
 @media (max-width: 991.98px) { 
+    .div-img-later {
+        display: none !important;
+    }
+
+
     .container-main-form {
         left: 0%;
         margin: auto;
@@ -760,6 +763,11 @@ input, textarea, select {
     }
  }
 
+@media (max-width: 1199.98px) {
+    #p6 .next-btn {
+        width: 261px !important;
+    }
+}
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 992px) { 
     .survey-intro {
@@ -831,5 +839,12 @@ input, textarea, select {
 
     #progressbar li span {
         margin-left: -80px !important;
+    }
+}
+
+
+@media screen and (max-height: 600px) {
+    .container-fluid {
+        margin-bottom: 10rem !important;
     }
 }
